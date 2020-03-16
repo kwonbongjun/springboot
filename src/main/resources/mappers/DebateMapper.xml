@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="debate">
+	<select id = "selectDebate" resultType="com.bong.springboot.bean.Debate">
+		SELECT *
+		FROM
+		DEBATE
+	</select>
+	
+	<insert id="addDebate" parameterType="com.bong.springboot.bean.Debate">
+		INSERT INTO DEBATE (no,title,content) VALUES
+		(SEQ_DEBATE.NEXTVAL,#{title},#{content})		 
+	</insert>
+	
+	<select id = "getDebateContent" parameterType="int" resultType="com.bong.springboot.bean.Debate">
+		SELECT *
+		FROM DEBATE
+		WHERE no = #{no}
+	</select>
+</mapper>

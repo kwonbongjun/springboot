@@ -2,9 +2,10 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="sampleMapper">
-	<select id = "select" resultType="com.bong.springboot.Customer">
-		<![CDATA[
+	<select id = "select" resultType="com.bong.springboot.bean.Customer">
+		<!-- <![CDATA[
 		SELECT * FROM CUSTOMER
-		]]>
+		]]> -->
+		SELECT * FROM CUSTOMER
 	</select>
 </mapper>

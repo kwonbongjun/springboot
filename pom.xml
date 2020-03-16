@@ -14,6 +14,13 @@
 	<name>springboot</name>
 	<description>Bong project for Spring Boot</description>
 
+	<repositories>
+	    <repository>
+	        <id>mesir-repo</id>
+	        <url>http://mesir.googlecode.com/svn/trunk/mavenrepo</url>
+	    </repository>
+	</repositories>
+	
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>
@@ -37,6 +44,12 @@
 			<version>2.1.1</version>
 		</dependency>
 
+		<!-- https://mvnrepository.com/artifact/com.oracle.ojdbc/oraclepki -->
+		<dependency>
+		    <groupId>com.oracle.ojdbc</groupId>
+		    <artifactId>oraclepki</artifactId>
+	    </dependency>
+		
 		<dependency>
 			<groupId>com.oracle.ojdbc</groupId>
 			<artifactId>ojdbc8</artifactId>
@@ -62,6 +75,18 @@
 			<groupId>org.apache.tomcat.embed</groupId>
 			<artifactId>tomcat-embed-jasper</artifactId>
 		</dependency>
+		
+		<dependency>
+		    <groupId>com.fasterxml.jackson.core</groupId>
+		    <artifactId>jackson-databind</artifactId>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-mongodb -->
+		<dependency>
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot-starter-data-mongodb</artifactId>
+	    </dependency>
+				
 	</dependencies>
 
 	<build>
