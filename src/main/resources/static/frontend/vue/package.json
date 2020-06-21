@@ -5,15 +5,22 @@
   "author": "",
   "private": true,
   "scripts": {
-    "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
+    "dev": "webpack-dev-server --host 0.0.0.0 --disableHostCheck true --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
     "test": "npm run unit",
     "lint": "eslint --ext .js,.vue src test/unit",
     "build": "node build/build.js"
   },
   "dependencies": {
+    "ag-grid-community": "^23.1.0",
+    "ag-grid-vue": "^23.1.0",
     "axios": "^0.19.2",
+    "bootstrap": "^4.4.1",
+    "bootstrap-vue": "^2.13.1",
+    "highcharts": "^8.1.1",
+    "node-sass": "^4.14.1",
     "vue": "^2.5.2",
+    "vue-property-decorator": "^8.4.2",
     "vue-router": "^3.0.1"
   },
   "devDependencies": {
@@ -51,6 +58,7 @@
     "postcss-loader": "^2.0.8",
     "postcss-url": "^7.2.1",
     "rimraf": "^2.6.0",
+    "sass-loader": "^7.3.1",
     "semver": "^5.3.0",
     "shelljs": "^0.7.6",
     "uglifyjs-webpack-plugin": "^1.1.1",

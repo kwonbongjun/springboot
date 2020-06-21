@@ -15,14 +15,18 @@
 <script>
 export default {
   name: 'navigation',
-  data () {
+  data() {
     return {
       curPage: 0,
-      pages: [{'id': 1, name: 'debate'}, {'id': 2, name: 'board'}]
+      pages: [
+        {'id': 1, name: 'debate'},
+        // {'id': 2, name: 'medical'},
+        {'id': 3, name: 'board'}
+      ]
     }
   },
   methods: {
-    movePage (page) {
+    movePage(page) {
       console.log(page.id)
       this.curPage = page.name
       // location.href = this.curPage

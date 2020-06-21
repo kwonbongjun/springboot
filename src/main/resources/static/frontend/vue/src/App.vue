@@ -40,8 +40,10 @@ export default {
 }
 </script>
 
-<style>
-/* #app {
+<style lang="scss">
+  @import "../node_modules/ag-grid-community/dist/styles/ag-grid.css";
+  @import "../node_modules/ag-grid-community/dist/styles/ag-theme-alpine.css";
+  /* #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -49,5 +51,4 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 } */
-
 </style>

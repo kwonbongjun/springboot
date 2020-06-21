@@ -27,6 +27,11 @@ export default new Router({
       path: '/debate',
       name: 'debate',
       component: Debate
+    },
+    {
+      path: '/board',
+      name: 'board',
+      component: Debate
     }
   ]
 })

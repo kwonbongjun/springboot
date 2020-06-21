@@ -27,7 +27,7 @@ public class Controller {
 
 //	  @Autowired
 //	  DBMapper mapper;
-//	  @CrossOrigin(origins = "http://localhost:8081")
+//	  @CrossOrigin(origins = "http://localhost:8080")
 //	  @RequestMapping("/db")
 //	  public ModelAndView selectList(ModelAndView model) {
 //		  List<Customer> resultList = mapper.selectList();
@@ -41,7 +41,7 @@ public class Controller {
 	  @Autowired 
 	  MongoTemplate mongoTemplate;
 	  
-	  @CrossOrigin(origins = "http://localhost:8081")
+	  @CrossOrigin(origins = "http://localhost:8080")
 	  @RequestMapping("/getDebate")
 	  public List<Debate> getDebate(ModelAndView model) {
 //		  List<Debate> resultList = mapper.selectDebate();
@@ -58,10 +58,10 @@ public class Controller {
 		  return resultList;
 	  }
 	  
-	  @CrossOrigin(origins = "http://localhost:8081")
+	  @CrossOrigin(origins = "http://localhost:8080")
 	  @RequestMapping(value = "/addDebate", method=RequestMethod.POST)
 	  public ModelAndView addDebate(HttpServletRequest req) {
-		  String url = "http://127.0.0.1:8081/debate";
+		  String url = "http://localhost:8080/debate";
 		  String title = req.getParameter("title");
 		  String content = req.getParameter("content");
 		  System.out.println(title);
@@ -69,14 +69,14 @@ public class Controller {
 //		  mapper.addDebate(debate);
 		  return new ModelAndView("redirect:" + url);
 	  }
-	  @CrossOrigin(origins = "http://localhost:8081")
+	  @CrossOrigin(origins = "http://localhost:8080")
 	  @RequestMapping(value = "/addDebate", method=RequestMethod.GET)
 	  public void getAddDebate(HttpServletRequest req) {
 		  System.out.println("get");
 		  return;
 	  }
 	  
-	  @CrossOrigin(origins = "http://localhost:8081")
+	  @CrossOrigin(origins = "http://localhost:8080")
 	  @RequestMapping(value = "/getDebateContent", method=RequestMethod.POST)
 	  public Debate getDebateContent(HttpServletRequest req) {
 		  int no;
@@ -100,7 +100,7 @@ public class Controller {
 		  Debate debate = mongoTemplate.findOne(query, Debate.class);
 		  return debate;
 	  }
-//	  @CrossOrigin(origins = "http://localhost:8081")
+//	  @CrossOrigin(origins = "http://localhost:8080")
 //	  @RequestMapping(value = "/getDebateContent", method=RequestMethod.GET)
 //	  public void getDebateContentGet(HttpServletRequest req) {
 //		  System.out.println("get");
